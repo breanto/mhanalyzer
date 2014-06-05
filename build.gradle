@@ -1,0 +1,28 @@
+apply plugin: 'java'
+
+springCoreVersion = '3.2.8'
+springContextVersion = '3.2.8'
+
+repositories {
+    mavenCentral()
+}
+
+subprojects {
+    apply plugin : 'java'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        testCompile group: 'junit', name: 'junit', version: '4.11'
+    }
+
+    version = '1.0'
+    sourceCompatibility = 1.8
+
+    jar{
+        manifest.attributes provider : 'gradle'
+    }
+}
+

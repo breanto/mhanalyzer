@@ -1,0 +1,5 @@
+rootProject.name = 'mhanalyzer'
+
+include 'mhanalyzer-backend'
+include 'mhanalyzer-console'
+
