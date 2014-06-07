@@ -1,5 +1,4 @@
 rootProject.name = 'mhanalyzer'
 
-include 'mhanalyzer-backend'
-include 'mhanalyzer-console'
+include 'mhanalyzer-backend','mhanalyzer-console'
 

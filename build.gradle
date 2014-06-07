@@ -7,7 +7,7 @@ repositories {
     mavenCentral()
 }
 
-subprojects {
+allprojects {
     apply plugin : 'java'
 
     repositories {
@@ -24,5 +24,16 @@ subprojects {
     jar{
         manifest.attributes provider : 'gradle'
     }
+}
+
+project(':mhanalyzer-console'){
+
+    apply plugin: 'application'
+
+    dependencies{
+        compile project(':mhanalyzer-backend')
+    }
+
+    mainClassName = 'com.elmonko.AppMain'
 }
 
