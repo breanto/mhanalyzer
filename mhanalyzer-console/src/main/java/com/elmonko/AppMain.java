@@ -4,7 +4,7 @@ package com.elmonko;
 import com.elmonko.service.MonsterService;
 
 /**
- * Created by dev on 05/06/2014.
+ * Created by ElMonko on 05/06/2014.
  */
 public class AppMain {
 
