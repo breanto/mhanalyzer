@@ -1,4 +1,33 @@
 apply plugin: 'java'
+apply plugin: 'liquibase'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.augusttechgroup:gradle-liquibase-plugin:0.7'
+        classpath 'mysql:mysql-connector-java:5.1.16'
+    }
+}
+
+liquibase {
+    changelogs{
+        main{
+                file = file('changelog.groovy')
+            }
+        }
+
+    databases{
+        local {
+                 url = 'jdbc:mysql://localhost/mhanalyzer'
+                 username = 'root'
+                 password = 'P@ssword'
+             }
+        }
+
+    defaultDatabase = databases.local
+}
 
 springCoreVersion = '3.2.8'
 springContextVersion = '3.2.8'
