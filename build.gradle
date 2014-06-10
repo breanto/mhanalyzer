@@ -22,7 +22,7 @@ liquibase {
         local {
                  url = 'jdbc:mysql://localhost/mhanalyzer'
                  username = 'root'
-                 password = 'P@ssword'
+                 password = ''
              }
         }
 
