@@ -1,0 +1,12 @@
+Creating properties on demand (a.k.a. dynamic properties) has been deprecated and is scheduled to be removed in Gradle 2.0. Please read http://gradle.org/docs/current/dsl/org.gradle.api.plugins.ExtraPropertiesExtension.html for information on the replacement for dynamic properties.
+Deprecated dynamic property: "springCoreVersion" on "root project 'mhanalyzer'", value: "3.2.8".
+Deprecated dynamic property: "springContextVersion" on "root project 'mhanalyzer'", value: "3.2.8".
+:update
+Liquibase Update Failed: Unknown Reason
+
+
+For more information, use the --logLevel flag)
+
+BUILD SUCCESSFUL
+
+Total time: 22.7 secs

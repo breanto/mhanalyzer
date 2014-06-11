@@ -14,7 +14,7 @@ buildscript {
 liquibase {
     changelogs{
         main{
-                file = file('changelog.groovy')
+                file = file('masterchangelog.groovy')
             }
         }
 
