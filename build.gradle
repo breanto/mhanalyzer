@@ -1,6 +1,26 @@
 apply plugin: 'java'
 apply plugin: 'liquibase'
 
+setEnvironment()
+
+def setEnvironment () {
+    ext.buildProperties = new Properties();
+    
+    def env = hasProperty('profile') ? profile : 'local'
+    
+    switch(env){
+        case 'local':
+            ext.buildProperties.load(new FileInputStream('local.properties'))
+        break
+        case 'prod':
+            ext.buildProperties.load(new FileInputStream('prod.properties'))
+        break
+        default:
+            ext.buildProperties.load(new FileInputStream('local.properties'))
+        break
+    }
+}
+    
 buildscript {
     repositories {
         mavenCentral()
@@ -20,17 +40,17 @@ liquibase {
 
     databases{
         local {
-                 url = 'jdbc:mysql://localhost/mhanalyzer'
-                 username = 'root'
-                 password = ''
+                 url = project.ext.buildProperties['dbUrl']
+                 username =project.ext.buildProperties['dbUser']
+                 password = project.ext.buildProperties['dbPwd']
              }
         }
 
     defaultDatabase = databases.local
 }
 
-springCoreVersion = '3.2.8'
-springContextVersion = '3.2.8'
+ext.springCoreVersion = '3.2.8'
+ext.springContextVersion = '3.2.8'
 
 repositories {
     mavenCentral()
