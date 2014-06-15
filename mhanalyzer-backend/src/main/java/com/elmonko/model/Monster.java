@@ -50,11 +50,11 @@ public class Monster {
 
     private String name;
 
-    private ReferenceData species;
-
     private Monster parent;
 
     private List<Armor> armors;
+
+    private List<MonsterReward> rewards;
 
     /**
      * get monster database id
@@ -66,22 +66,6 @@ public class Monster {
 
     public void setId(long id) {
         this.id = id;
-    }
-
-    /**
-     * get monster's species
-     * @return
-     */
-    public ReferenceData getSpecies() {
-        return species;
-    }
-
-    /**
-     * set monster's species
-     * @param species
-     */
-    public void setSpecies(ReferenceData species) {
-        this.species = species;
     }
 
     /**
@@ -131,4 +115,21 @@ public class Monster {
     public void setArmors(List<Armor> armors) {
         this.armors = armors;
     }
+
+    /**
+     * Get the list of rewards
+     * @return
+     */
+    public List<MonsterReward> getRewards() {
+        return rewards;
+    }
+
+    /**
+     * Set the list of rewards
+     * @param rewards
+     */
+    public void setRewards(List<MonsterReward> rewards) {
+        this.rewards = rewards;
+    }
+
 }

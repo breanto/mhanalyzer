@@ -1,5 +1,7 @@
 package com.elmonko.model;
 
+import java.util.List;
+
 /**
  * Created by ElMonko on 09/06/2014.
  */
@@ -10,6 +12,10 @@ public class Armor {
     private String name;
 
     private ReferenceData rank;
+
+    private List<ArmorItem> items;
+
+    private Monster monster;
 
     /**
      * get armor database id
@@ -57,5 +63,37 @@ public class Armor {
      */
     public void setRank(ReferenceData rank) {
         this.rank = rank;
+    }
+
+    /**
+     * Get item armor composition
+     * @return
+     */
+    public List<ArmorItem> getItems() {
+        return items;
+    }
+
+    /**
+     * Set itme armor composition
+     * @param items
+     */
+    public void setItems(List<ArmorItem> items) {
+        this.items = items;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public Monster getMonster() {
+        return monster;
+    }
+
+    /**
+     *
+     * @param monster
+     */
+    public void setMonster(Monster monster) {
+        this.monster = monster;
     }
 }

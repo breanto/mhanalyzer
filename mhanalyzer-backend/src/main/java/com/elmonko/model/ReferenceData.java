@@ -9,7 +9,7 @@ public class ReferenceData {
 
     private long id;
 
-    private String name;
+    private String type;
 
     private String value;
 
@@ -21,20 +21,12 @@ public class ReferenceData {
         this.id = id;
     }
 
-    /**
-     * get reference data name
-     * @return
-     */
-    public String getName() {
-        return name;
+    public String getType() {
+        return type;
     }
 
-    /**
-     * set reference data name
-     * @param name
-     */
-    public void setName(String name) {
-        this.name = name;
+    public void setType(String type) {
+        this.type = type;
     }
 
     /**
