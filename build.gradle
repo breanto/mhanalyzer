@@ -75,11 +75,21 @@ allprojects {
     }
 }
 
+project(':mhanalyzer-backend'){
+
+    dependencies{
+        compile 'org.springframework:spring-core:3.2.9.RELEASE'
+        compile 'org.springframework:spring-context:3.2.9.RELEASE'
+        compile 'org.springframework:spring-jdbc:3.2.9.RELEASE'
+    }
+}
+
 project(':mhanalyzer-console'){
 
     apply plugin: 'application'
 
     dependencies{
+        compile 'org.springframework:spring-context:3.2.9.RELEASE'
         compile project(':mhanalyzer-backend')
     }
 
