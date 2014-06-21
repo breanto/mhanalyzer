@@ -81,6 +81,7 @@ project(':mhanalyzer-backend'){
         compile 'org.springframework:spring-core:3.2.9.RELEASE'
         compile 'org.springframework:spring-context:3.2.9.RELEASE'
         compile 'org.springframework:spring-jdbc:3.2.9.RELEASE'
+        compile 'org.springframework:spring-test:3.2.9.RELEASE'
     }
 }
 

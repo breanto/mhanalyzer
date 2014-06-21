@@ -1,6 +1,9 @@
 package com.elmonko;
 
 import com.elmonko.service.MonsterService;
+
+import org.springframework.context.ApplicationContext;
+
 /**
  * Created by dev on 05/06/2014.
  */
